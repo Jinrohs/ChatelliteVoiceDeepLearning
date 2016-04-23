@@ -1,0 +1,1 @@
+data/japan_man_syuzo.words.valid
