@@ -1,10 +1,15 @@
-# Recurrent Net Language Model
+# ChatelliteVoiceDeepLearning
 
-This is an example of a recurrent net for language modeling.
+Recurrent neural network model for Chatellite Voice.
 The network is trained to predict the word given the preceding word sequence.
 
-This example is based on the following RNNLM implementation written in Torch7.
-https://github.com/tomsercu/lstm
+This code is based on the following RNNLM example implementation.
+https://github.com/pfnet/chainer/tree/master/examples/ptb
 
-This example requires the dataset to be downloaded by the script `download.py`.
-If you want to run this example on the N-th GPU, pass `--gpu=N` to the script.
+## How to ues
+```
+python train_ptb.py -g 0
+python genetxt.py -m rnnlm.model -v vocab.bin --length 30 -o 100 > data/foo.result
+python convert_to_text.py data/foo.result
+```
+
